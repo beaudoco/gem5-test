@@ -24,7 +24,7 @@
 #define rowsize 	 40
 
     /* Puzzle */
-#define size	 	 511
+#define size	 	 1023
 #define classmax 	 3
 #define typemax 	 12
 #define d 		     8
