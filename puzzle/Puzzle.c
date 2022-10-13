@@ -50,6 +50,11 @@ struct node {
     /* Towers */ /*
     discsizrange = 1..maxcells; */
 #define    stackrange	3
+
+#ifdef FRMWRK
+#include "gem5/m5ops.h"
+#endif
+
 /*    cellcursor = 0..maxcells; */
 struct    element {
 	int discsize;
@@ -220,6 +225,16 @@ void Puzzle ()  {
 int main()
 {
 	int i;
+
+    #ifdef FRMWRK
+    	m5_reset_stats(0,0);
+	#endif
+
 	for (i = 0; i < 100; i++) Puzzle();
-	return 0;
+	
+    #ifdef FRMWRK
+    	m5_dump_stats(0,0);
+	#endif
+    
+    return 0;
 }
