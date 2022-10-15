@@ -24,9 +24,9 @@
 #define rowsize 	 40
 
     /* Puzzle */
-#define size	 	 1023
+#define size	 	 255
 #define classmax 	 3
-#define typemax 	 12
+#define typemax 	 255
 #define d_puzzle     8
 
     /* Bubble, Quick */
